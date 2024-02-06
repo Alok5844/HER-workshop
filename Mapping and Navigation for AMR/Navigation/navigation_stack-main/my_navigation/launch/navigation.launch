@@ -1,0 +1,23 @@
+<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  
+  <?xml version="1.0" ?>
+
+<launch>
+  <!-- Arguments -->
+  <arg name="move_forward_only" default="true"/>
+
+  <!-- Map server for Map-based Navigation-->
+ 
+	 <node pkg="map_server" name="map_server" type="map_server" args="$(find tortoisebot_navigation)/maps/map.yaml"/>
+
+
+  <!-- rviz -->
+  <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find tortoisebot_navigation)/rviz/tortoisebot_navigation.rviz"/>
+
+  <!-- move_base -->
+  <include file="$(find tortoisebot_navigation)/launch/move_base.launch">
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include>
+
+</launch>
