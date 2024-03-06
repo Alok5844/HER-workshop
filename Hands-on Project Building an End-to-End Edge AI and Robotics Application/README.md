@@ -162,5 +162,5 @@ Once this technique is installed on the boat and fully deployed we will use some
 	detectnet /dev/video1
 
 
-
+To see more Jetson Projects Visit: https://developer.nvidia.com/embedded/community/jetson-projects
 
