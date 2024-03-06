@@ -163,4 +163,5 @@ Once this technique is installed on the boat and fully deployed we will use some
 
 
 To see more Jetson Projects Visit: https://developer.nvidia.com/embedded/community/jetson-projects
-
+and checkout
+https://github.com/dusty-nv/jetson-inference
